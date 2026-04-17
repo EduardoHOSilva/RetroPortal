@@ -11,157 +11,174 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body class="bg-dark text-light">
 
     <div id="preloader"
-        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; color: #00ff00; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: 'Courier New', monospace;">
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000000; color: #00ff00; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: 'Courier New', monospace;">
 
-        <div style="text-align: center; margin-bottom: 20px;">
-            <h1 style="font-size: 2rem; text-transform: uppercase; letter-spacing: 5px; text-shadow: 0 0 10px #00ff00;">
-                ★ RetroPortal ★</h1>
-            <p class="blink" style="color: #ffff00;">CONECTANDO... AGUARDE...</p>
+        <div style="text-align:center; margin-bottom:20px;">
+            <h1 style="font-size:2rem; letter-spacing:5px; text-shadow:0 0 10px #00ff00;"> ★ RetroPortal 2000 ★ </h1>
+            <p class="blink" style="color:#ffff00;">INICIALIZANDO O SISTEMA...</p>
         </div>
 
-        <div
-            style="width: 300px; height: 30px; border: 2px outset #fff; background: #333; padding: 2px; position: relative;">
+        <div style="width:300px;height:30px;border:2px outset #fff;background:#333;padding:2px;position:relative;">
             <div id="progress-bar"
-                style="width: 0%; height: 100%; background: #008000; transition: width 0.1s linear; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                style="width:0%;height:100%;background:#008000;transition:width .1s linear;display:flex;align-items:center;justify-content:center;">
+
                 <span id="progress-text"
-                    style="color: #fff; font-size: 0.8rem; font-weight: bold; position: absolute; left: 50%; transform: translateX(-50%);">0%</span>
+                    style="color:#fff;font-size:.8rem;font-weight:bold;position:absolute;left:50%;transform:translateX(-50%);">0%</span>
             </div>
         </div>
 
-        <p style="font-size: 0.7rem; color: #888; margin-top: 10px;">Velocidade estimada: 56kbps</p>
+        <p style="font-size:.7rem;color:#888;margin-top:10px;">Velocidade estimada: 56kbps</p>
 
-        <img src="https://i.gifer.com/ZZ5H.gif" alt="Ampulheta" style="width: 32px; margin-top: 20px;">
+        <img src="https://i.gifer.com/ZZ5H.gif" alt="Ampulheta" style="width:32px;margin-top:20px;">
     </div>
 
+    <!-- HEADER -->
     <header>
-        <h1>★ RetroPortal ★</h1>
+        <h1>★ RetroPortal 2000 ★</h1>
+
         <div class="marquee-compat">
-            <span>+++ NOTÍCIA URGENTE: PORTAL EM ATUALIZAÇÃO! +++ DEIXE SEU RECADO NO BLOG! +++ ACESSE O CHAT!
-                +++</span>
+            <span>
+                +++ NOTÍCIA URGENTE: PORTAL EM ATUALIZAÇÃO! +++ DEIXE SEU RECADO NO BLOG! +++ ACESSE O CHAT! +++
+            </span>
         </div>
     </header>
-
-
 
     <div class="layout">
 
         <aside class="menu">
-
             <h3>Menu</h3>
 
-            <button onclick="showSection('home')">Home</button>
-            <button onclick="showSection('tools')">Gerador Nick</button>
-            <button onclick="showSection('blog')">Blog</button>
-            <button onclick="showSection('curiosities')">Arquivo</button>
+            <button onclick="showSection('home')">Home.exe</button>
+            <button onclick="showSection('tools')">Tarefas.exe</button>
+            <button onclick="showSection('blog')">Blog.exe</button>
+            <button onclick="showSection('curiosities')">Arquivo.exe</button>
+            <button onclick="showStats('show')">Ver Estatísticas</button>
+
             <hr>
 
             <p class="blink text-success">ONLINE</p>
         </aside>
 
-        <!-- CONTEÚDO -->
-
         <main class="content">
-            <div id="home" class="section">
-                <div class="welcome-banner"
-                    style="text-align: center; border: 2px double #00ff00; padding: 15px; background: #001a00; margin-bottom: 20px;">
-                    <h2 style="color: #00ff00; text-transform: uppercase;"> - BEM-VINDO AO RETROPORTAL -</h2>
-                    <p>De volta pro anos 2000!</p>
+
+            <section id="home" class="section">
+
+                <div class="welcome-banner text-center border border-success p-3 mb-3 bg-dark">
+                    <h2 class="text-success text-uppercase">BEM-VINDO AO RETROPORTAL</h2>
+                    <p>De volta pros anos 2000!</p>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-7">
-                        <h3> Destaques do Portal</h3>
 
-                        <ul style="list-style-type: ''; padding-left: 20px; font-size: 0.9rem;">
-                            <li><b>Novo:</b> Gerador de Nick Algorítmico!</li>
+                    <div class="col-md-7">
+                        <h3>Destaques do Portal</h3>
+
+                        <ul style="font-size:.9rem;">
+                            <li><b>Novo:</b> Lista de tarefas!</li>
                             <li><b>Blog:</b> Deixe seu scrap no nosso mural de recados.</li>
-                            <li><b>Educação:</b> Aprenda sobre a era das Lan Houses em "Curiosidades".</li>
+                            <li><b>Educação:</b> Aprenda sobre a era das Lan Houses.</li>
                         </ul>
-                        <p style="font-size: 0.8rem; color: #888;"><i>Criado em: <span
-                                    class="current-date-text">13/03/2026 </span></i></p>
+
+                        <p style="font-size:.8rem;color:#888;">
+                            <i>Criado em: <span class="current-date-text">13/03/2026</span></i>
+                        </p>
                     </div>
 
-                    <div class="col-md-5" style="text-align: center; border-left: 1px dashed #444;">
-                        <p style="margin-bottom: 5px;"> Visitante nº:</p>
-                        <div id="counter"
-                            style="background: #000; color: #ff0000; font-family: 'Courier New', monospace; font-size: 2rem; font-weight: bold; border: 2px inset #555; display: inline-block; padding: 5px 15px; letter-spacing: 5px;">
-                            0000</div>
+                    <div class="col-md-5 text-center border-start border-secondary">
 
-                        <div class="badges" style="margin-top: 20px;">
-                            <p style="font-size: 0.7rem; color: #666;">WEB STANDARDS:</p>
+                        <p>Visitante nº:</p>
+
+                        <div id="counter"
+                            style="background:#000;color:#ff0000;font-family:'Courier New';font-size:2rem;border:2px inset #555;padding:5px 15px;letter-spacing:5px;">
+                            0000
+                        </div>
+
+                        <div class="mt-3">
+                            <p style="font-size:.7rem;color:#666;">WEB STANDARDS:</p>
+
                             <img src="https://vignette.wikia.nocookie.net/web-design/images/a/a2/Ie_logo.gif" alt="IE"
-                                style="width: 80px; margin: 2px;">
-                            <img src="https://img.shields.io/badge/Made_with-Notepad-blue?style=flat-square"
-                                alt="Notepad">
+                                style="width:80px;">
                         </div>
                     </div>
                 </div>
 
                 <hr>
 
-                <div class="status-box"
-                    style="font-size: 0.8rem; background: #222; padding: 10px; border: 1px solid #444;">
+                <div class="status-box p-2 border border-secondary bg-dark" style="font-size:.8rem;">
                     <p><b>Dica do Dia:</b> <span id="dica-texto"></span></p>
                 </div>
-            </div>
+            </section>
 
-            <div id="tools" class="section">
-                <hr>
-                <h3>Nick Retrô</h3>
-                <input type="text" id="nickInput" placeholder="Seu nome...">
-                <button onclick="generateNick()">Gerar</button>
-                <p id="nickResult" style="color: #00ff00; font-weight: bold; margin-top: 10px;"></p>
-            </div>
 
-            <div id="blog" class="section">
-                <h2>Mural de Recados</h2>
-                <div style="border: 1px inset #fff; padding: 10px; background: #222; margin-bottom: 10px;">
-                    <input type="text" id="guestName" placeholder="Seu nome" style="width: 100%; margin-bottom: 5px;">
-                    <textarea id="guestMsg" placeholder="Deixe um scrap..."
-                        style="width: 100%; height: 50px;"></textarea>
-                    <button onclick="postScrap()">Enviar</button>
+            <section id="tools" class="section">
+                <h3>Lista de Tarefas</h3>
+
+                <div class="border p-2 bg-dark mb-2">
+                    <input type="text" id="taskInput" placeholder="Nova tarefa..." class="form-control mb-2">
+                    <button onclick="addTask()">Adicionar</button>
                 </div>
-                <div id="scraps-display" style="max-height: 200px; overflow-y: auto;"></div>
-            </div>
 
-            <div id="curiosities" class="section">
+                <div id="task-list" style="max-height:200px; overflow-y:auto;"></div>
+            </section>
+
+            <section id="blog" class="section">
+
+                <h2>Mural de Recados</h2>
+
+                <div class="border p-2 bg-dark mb-2">
+
+                    <input type="text" id="guestName" placeholder="Seu nome" class="form-control mb-2">
+
+                    <textarea id="guestMsg" placeholder="Deixe um scrap..." class="form-control mb-2">
+                    </textarea>
+
+                    <button onclick="postScrap()">Enviar</button>
+
+                </div>
+
+                <div id="scraps-display" style="max-height:200px;overflow-y:auto;"></div>
+
+            </section>
+
+            <section id="curiosities" class="section">
+
                 <h2>Enciclopédia Anos 2000</h2>
-                <p>Clique no botão para aprender algo sobre esta era dourada:</p>
+
+                <p>Clique no botão para aprender algo sobre essa era:</p>
 
                 <div id="fact-box"
-                    style="background: #111; border: 2px inset #fff; padding: 20px; min-height: 120px; color: #00ff00; font-family: 'Courier New', monospace; margin-bottom: 15px;">
+                    style="background:#000000;border:2px inset #fff;padding:20px;min-height:120px;color:#00ff00;font-family:'Courier New';">
                     Carregando dados...
                 </div>
 
                 <button onclick="getRetroFact()" class="w-100 mt-2">OUTRO FATO</button>
 
-                <div style="border: 1px dashed #00ff00; padding: 10px; background: #000;">
-                    <p style="color: #00ff00; font-size: 0.8rem;">Tem um fato irado? Manda aí:</p>
-                    <input type="text" id="suggestName" placeholder="Seu nick"
-                        style="width: 100%; margin-bottom: 5px; font-size: 0.8rem;">
-                    <textarea id="suggestFact" placeholder="O que rolava nos anos 2000?"
-                        style="width: 100%; height: 40px; font-size: 0.8rem;"></textarea>
-                    <button onclick="sendSuggestion()"
-                        style="width: 100%; font-size: 0.7rem; background: #008000; color: #fff;">[ ENVIAR SUGESTÃO
-                        ]</button>
-                </div>
-            </div>
-        </main>
+                <div class="border border-success p-2 mt-3 bg-black">
 
-        <!-- COLUNA DIREITA -->
+                    <p class="text-success small">Tem um fato? Manda aí:</p>
+
+                    <input type="text" id="suggestName" placeholder="Seu nick" class="form-control mb-2">
+
+                    <textarea id="suggestFact" placeholder="O que rolava nos anos 2000?" class="form-control mb-2">
+                    </textarea>
+
+                    <button onclick="sendSuggestion()" class="btn btn-success w-100">ENVIAR SUGESTÃO:</button>
+
+                </div>
+            </section>
+        </main>
 
         <aside class="panel desktop-area" id="desktop">
             <h3 class="desktop-title">Área de Trabalho</h3>
 
             <div class="icon draggable" draggable="true" ondragstart="drag(event)" id="icon1">
                 <img src="https://win98icons.alexmeub.com/icons/png/computer_explorer-4.png" alt="PC">
-                <span>Meu PC</span>
+                <span> Meu PC </span>
             </div>
 
             <hr>
@@ -177,27 +194,27 @@
                 <div class="window-header">
                     <span>Notas.txt</span>
                 </div>
-                <div style="background: rgb(0, 0, 0); padding: 2px;">
+
+                <div style="background: rgb(217, 255, 1); padding: 2px;">
                     <textarea id="side-notes"
-                        style="width: 100%; height: 100px; border: none; font-family: 'Tahoma', sans-serif; color: black;"></textarea>
+                        style="width: 100%; height: 100px; border: none; font-family: 'Tahoma', sans-serif; color: rgb(202, 139, 139);">
+                    </textarea>
                 </div>
-                <div style="font-size: 0.6rem; color: #000000; padding: 2px; background: #ece9d8;">
-                    Salva automaticamente!
+
+                <div style="font-size: 0.6rem; color: #000000; padding: 2px; background: #ece9d8"> Salva
+                    automaticamente!
                 </div>
 
                 <p>Última atualização:</p>
                 <p id="last-update">--/--/--</p>
-            </div>     
-    </aside>
+            </div>
+        </aside>
 
+        <footer>
+            <p>RetroPortal © 2026</p>
+        </footer>
 
-
-    <footer>
-        <p>RetroPortal © 2026</p>
-    </footer>
-
-    <script src="js/app.js"></script>
-    <script src="js/todo.js"></script>
-
+        <script src="js/app.js"></script>
+        <script src="js/todo.js"></script>
 </body>
 </html>

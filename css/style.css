@@ -59,7 +59,7 @@ aside, main {
 .marquee-compat span {
     display: inline-block;
     padding-left: 100%;
-    animation: marquee-scroll 15s linear infinite;
+    animation: marquee-scroll 12s linear infinite;
 }
 
 @keyframes marquee-scroll {
@@ -76,10 +76,12 @@ button {
     padding: 5px;
     margin-bottom: 8px;
     text-transform: uppercase;
+    transition: transform 0.1s;
 }
 
 button:active {
     border: 2px inset #00ff00;
+    transform: scale(0.95);
 }
 
 .digital-clock {
@@ -167,3 +169,4 @@ textarea, input {
     top: 200px; /* Começa mais pra baixo */
     left: 10px;
 }
+
