@@ -521,16 +521,7 @@ setInterval(() => {
     localStorage.setItem('autosave', JSON.stringify(getData()));
 }, 5000);
 
-function runCommand(cmd) {
-    if (cmd === "help") return "Comandos: help, clear, hack";
-    if (cmd === "hack") return "Acesso negado.";
-    if (cmd === "clear") return "";
-
-    return "Comando não reconhecido.";
-}
 
 window.onload = function () {
     simulateLoading();
-    startClock();
-    setupDesktop();
 };
